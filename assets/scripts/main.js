@@ -179,7 +179,7 @@ table.addEventListener('click', function(event){
 dir.addEventListener('click', function(event){
     event.preventDefault();
     try{
-        console.dir(obj.attributes);
+        console.dir(obj.id);
     } catch(err){
         alert("error in console.dir");
     }
