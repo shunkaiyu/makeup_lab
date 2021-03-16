@@ -11,6 +11,7 @@ var air = document.getElementById('radio-air-horn');
 var car = document.getElementById('radio-car-horn');
 var party = document.getElementById('radio-party-horn');
 var sound_img = document.getElementById('sound-image');
+var obj = document.getElementById('party-horn-form');
 
 class IndexOutOfBoundryError extends Error{
     constructor(message){
@@ -122,6 +123,7 @@ var group = document.getElementById("console_group");
 var start = document.getElementById("console_time");
 var end = document.getElementById("console_timeEnd");
 var trace = document.getElementById("console_trace");
+var global = document.getElementById("console_global");
 
 let json = '{ "age": test dir pass }'
 // let error = new Error(message);
@@ -177,7 +179,7 @@ table.addEventListener('click', function(event){
 dir.addEventListener('click', function(event){
     event.preventDefault();
     try{
-        console.dir(json.age);
+        console.dir(json.attributes);
     } catch(err){
         alert("error in console.dir");
     }
@@ -186,7 +188,7 @@ dir.addEventListener('click', function(event){
 dirxml.addEventListener('click', function(event){
     event.preventDefault();
     try{
-        console.dir(json);
+        console.dirxml(obj);
     } catch(err){
         alert("error in console.dirxml");
     }
@@ -238,6 +240,16 @@ trace.addEventListener('click', function(event){
         first();
     } catch(err){
         alert("error in console.trace");
+    }
+})
+
+global.addEventListener('click', function(event){
+    event.preventDefault();
+    try{
+        var boom = ducument.getElementById("boom");
+        console.log(boom);
+    } catch(err){
+        throw new ReferenceError("no boom");
     }
 })
 
