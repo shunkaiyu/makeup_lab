@@ -125,7 +125,7 @@ var end = document.getElementById("console_timeEnd");
 var trace = document.getElementById("console_trace");
 var global = document.getElementById("console_global");
 
-let json = '{ "age": test dir pass }'
+var json = '{ "age": test dir pass }'
 // let error = new Error(message);
 // let error = new SyntaxError(message);
 // let error = new ReferenceError(message);
@@ -179,7 +179,7 @@ table.addEventListener('click', function(event){
 dir.addEventListener('click', function(event){
     event.preventDefault();
     try{
-        console.dir(json.attributes);
+        console.dir(obj.attributes);
     } catch(err){
         alert("error in console.dir");
     }
