@@ -129,6 +129,7 @@ let json = '{ "age": test dir pass }'
 // let error = new ReferenceError(message);
 
 log.addEventListener('click', function(event){
+    event.preventDefault();
     try{
         console.log("log demo");
     } catch(err){
@@ -137,6 +138,7 @@ log.addEventListener('click', function(event){
 })
 
 error.addEventListener('click', function(event){
+    event.preventDefault();
     try{
         console.error("error demo");
     } catch(err){
@@ -161,6 +163,7 @@ var strTable = [
   ]
 
 table.addEventListener('click', function(event){
+    event.preventDefault();
     try{
         if(strTable == null){
             throw new error("null input");
@@ -172,6 +175,7 @@ table.addEventListener('click', function(event){
 })
 
 dir.addEventListener('click', function(event){
+    event.preventDefault();
     try{
         console.dir(json.age);
     } catch(err){
@@ -180,6 +184,7 @@ dir.addEventListener('click', function(event){
 })
 
 dirxml.addEventListener('click', function(event){
+    event.preventDefault();
     try{
         console.dir(json);
     } catch(err){
@@ -188,6 +193,7 @@ dirxml.addEventListener('click', function(event){
 })
 
 group.addEventListener('click', function(event){
+    event.preventDefault();
     try{
         const label = 'Adolescent Irradiated Espionage Tortoises';
         console.group(label);
@@ -202,6 +208,7 @@ group.addEventListener('click', function(event){
 })
 
 start.addEventListener('click', function(event){
+    event.preventDefault();
     try{
         console.log("time start)");
         console.time();
@@ -211,6 +218,7 @@ start.addEventListener('click', function(event){
 })
 
 end.addEventListener('click', function(event){
+    event.preventDefault();
     try{
         console.timeEnd();
     } catch(err){
@@ -221,6 +229,7 @@ end.addEventListener('click', function(event){
 })
 
 trace.addEventListener('click', function(event){
+    event.preventDefault();
     try{
         const first = () => { second(); };
         const second = () => { third(); };
