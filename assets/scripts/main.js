@@ -21,7 +21,7 @@ class IndexOutOfBoundryError extends Error{
 }
 
 function testInput(input){
-    if(input<0 || input>100){
+    if(input<0 || input>100 || !(Number.isFinite(input))){
         throw new IndexOutOfBoundryError("Invalid input");
     }
 }
