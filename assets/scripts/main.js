@@ -241,6 +241,6 @@ trace.addEventListener('click', function(event){
     }
 })
 
-TrackJS.track('Testing TrackJS!');
+// TrackJS.track('Testing TrackJS!');
                         
 
